@@ -1,5 +1,5 @@
 {
-  "name": "noir-poseidon2-js",
+  "name": "noir-poseidon2-ts",
   "module": "index.ts",
   "type": "module",
   "private": true,
