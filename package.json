@@ -1,5 +1,5 @@
 {
-  "name": "poseidon2-compression-js",
+  "name": "poseidon2-compression-ts",
   "module": "index.ts",
   "type": "module",
   "private": true,
