@@ -1,5 +1,5 @@
 {
-  "name": "noir-poseidon2-ts",
+  "name": "poseidon2-compression-js",
   "module": "index.ts",
   "type": "module",
   "private": true,
