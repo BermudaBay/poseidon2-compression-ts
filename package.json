@@ -1,6 +1,5 @@
 {
   "name": "poseidon2-compression-ts",
-  "module": "index.ts",
   "type": "module",
   "private": true,
   "devDependencies": {
@@ -14,5 +13,23 @@
   },
   "dependencies": {
     "@zkpassport/poseidon2": "^0.6.2"
-  }
+  },
+  "scripts": {
+    "build": "tsup index.ts --format esm,cjs --dts --out-dir dist --clean",
+    "prepare": "npm run build"
+  },
+  "main": "dist/index.cjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false
 }
