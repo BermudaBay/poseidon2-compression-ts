@@ -1,7 +1,5 @@
 import { add, mul } from "./arith"
 
-export type Mds2Fn = (state: [bigint, bigint]) => [bigint, bigint]
-
 // t=2 external mix
 export function external_2([a, b]: [bigint, bigint]): [bigint, bigint] {
   const sum = add(a, b)
