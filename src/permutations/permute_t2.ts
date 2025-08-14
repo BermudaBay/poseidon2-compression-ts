@@ -1,11 +1,11 @@
 import { add, sbox, sbox_e, mod } from "../utils/arith"
-import { internal_2, mds2_circ2_1 } from "../utils/mix"
+import { internal_2, external_2 } from "../utils/mix"
 import { cfg2 } from "../constants/t2"
 
 export function permuteBn254T2(
   input: [bigint, bigint],
 ): [bigint, bigint] {
-  const mds2 = mds2_circ2_1
+  const mds2 = external_2
   const cfg = cfg2
   let state: [bigint, bigint] = mds2([mod(input[0]), mod(input[1])])
 
