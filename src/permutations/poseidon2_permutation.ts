@@ -31,9 +31,9 @@ export class Poseidon2Bn254Permuter<T extends bigint[]> {
     // Partial rounds
     for (let r = 0; r < this.cfg.partial_rc.length; r++) {
       // add RC only to first element
-      ;(state as unknown as bigint[])[0] = add((state as unknown as bigint[])[0]!, this.cfg.partial_rc[r]!)
+      state[0] = add(state[0]!, this.cfg.partial_rc[r]!)
       // S-box only on first element
-      ;(state as unknown as bigint[])[0] = sbox_e((state as unknown as bigint[])[0]!)
+      state[0] = sbox_e(state[0]!)
       state = this.internal(state)
     }
 
@@ -48,7 +48,10 @@ export class Poseidon2Bn254Permuter<T extends bigint[]> {
   }
 
   private addRoundConstants(state: T, rc: T): T {
-    const out = (state as unknown as bigint[]).map((v, i) => add(v, (rc as unknown as bigint[])[i]!))
-    return out as unknown as T
+    const out = new Array(state.length) as T
+    for (let i = 0; i < state.length; i++) {
+      out[i] = add(state[i]!, rc[i]!)
+    }
+    return out
   }
 }
