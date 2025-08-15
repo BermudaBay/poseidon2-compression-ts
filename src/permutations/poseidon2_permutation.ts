@@ -18,8 +18,8 @@ export class Poseidon2Bn254Permuter<T extends bigint[]> {
   }
 
   permute(input: T): T {
-    // Initial external mix after reducing inputs mod p
-    let state = this.external(input.map(mod) as T)
+    // Initial external mix
+    let state = this.external(input)
 
     // First full rounds (4)
     for (let r = 0; r < 4; r++) {
