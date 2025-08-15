@@ -16,7 +16,9 @@
   },
   "scripts": {
     "build": "tsup index.ts --format esm,cjs --dts --out-dir dist --clean",
-    "prepare": "npm run build"
+    "prepare": "npm run build",
+    "test": "vitest run",
+    "test:watch": "vitest"
   },
   "main": "dist/index.cjs",
   "module": "dist/index.mjs",
