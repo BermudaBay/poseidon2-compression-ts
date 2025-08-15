@@ -2,8 +2,7 @@ export const BN254_PRIME =
   21888242871839275222246405745257275088548364400416034343698204186575808495617n
 
 export function mod(a: bigint): bigint {
-  const r = a % BN254_PRIME
-  return r >= 0n ? r : r + BN254_PRIME
+  return a % BN254_PRIME
 }
 
 export function add(a: bigint, b: bigint): bigint {
