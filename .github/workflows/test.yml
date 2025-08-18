@@ -1,10 +1,10 @@
-name: Test
+name: CI
 
 on:
+  pull_request:
   push:
     branches: [ main ]
-  pull_request:
-    branches: [ main ]
+  workflow_dispatch:
 
 jobs:
   test:
@@ -17,9 +17,5 @@ jobs:
       uses: oven-sh/setup-bun@v2
       with:
         bun-version: '1.2.20'
-
-    - name: Install dependencies (bun)
-      run: bun install
-
-    - name: Run tests
-      run: bun x vitest run
+    - run: bun install
+    - run: bun x vitest run
