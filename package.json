@@ -3,16 +3,16 @@
   "type": "module",
   "private": true,
   "devDependencies": {
-    "@types/bun": "latest",
-    "@types/node": "^24.2.1",
-    "tsup": "^8.5.0",
-    "vitest": "^3.2.4"
+    "@types/bun": "1.2.20",
+    "@types/node": "24.2.1",
+    "tsup": "8.5.0",
+    "vitest": "3.2.4"
   },
   "peerDependencies": {
-    "typescript": "^5.9.2"
+    "typescript": ">=5.9.2 <6"
   },
   "dependencies": {
-    "@zkpassport/poseidon2": "^0.6.2"
+    "@zkpassport/poseidon2": "0.6.2"
   },
   "scripts": {
     "build": "tsup index.ts --format esm,cjs --dts --out-dir dist --clean",
