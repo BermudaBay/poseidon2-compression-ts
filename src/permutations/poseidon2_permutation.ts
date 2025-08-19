@@ -1,4 +1,4 @@
-import { add, mod, sbox, sbox_e } from "../utils/arith"
+import { add, sbox, sbox_e } from "../utils/arith"
 
 export type Poseidon2Cfg<T extends bigint[]> = {
   first_full_rc: T[]
