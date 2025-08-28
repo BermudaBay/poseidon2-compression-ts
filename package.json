@@ -18,7 +18,8 @@
     "build": "tsup index.ts --format esm,cjs --dts --out-dir dist --clean",
     "prepare": "npm run build",
     "test": "vitest run",
-    "test:watch": "vitest"
+    "test:watch": "vitest",
+    "merkle:zeros": "tsup scripts/merkle_zeros.ts --format esm --out-dir scripts && bun ./scripts/merkle_zeros"
   },
   "main": "dist/index.cjs",
   "module": "dist/index.js",
