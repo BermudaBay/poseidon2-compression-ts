@@ -1,5 +1,6 @@
 {
   "name": "poseidon2-compression-ts",
+  "version": "0.1.0",
   "type": "module",
   "private": true,
   "devDependencies": {
